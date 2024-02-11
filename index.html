@@ -21,7 +21,7 @@
       }
       .subcontainer {
         cursor: pointer;
-        height: 88.5vh;
+        height: 88.5dvh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -32,35 +32,21 @@
         color: #faf4db;
         font-size: max(20vw, 30px);
       }
-      #time {
-        display: none;
-      }
-      .full-screen {
-        z-index: 1;
-        cursor: pointer;
-        text-align: right;
-        position: fixed;
-      }
     </style>
   </head>
 
   <body onload="startTime()">
     <div class="subcontainer" id="full-screen" onclick="fullscreen()">
       <div id="txt"></div>
-      <div id="time"></div>
     </div>
     <script>
       function startTime() {
         const today = new Date();
         let h = today.getHours() % 12 || 12;
         let m = today.getMinutes();
-        let s = today.getSeconds();
-        let t = today.getHours() < 12 ? '\nAM' : '\nPM';
         m = checkTime(m);
-        s = checkTime(s);
 
         document.getElementById('txt').innerHTML = h + ':' + m;
-        document.getElementById('time').innerHTML = t;
         setTimeout(startTime, 1000);
       }
 
