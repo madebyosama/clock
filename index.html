@@ -12,12 +12,18 @@
         src: url('./font.ttf') format('truetype-variations');
       }
 
-      html {
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
         background-color: #212121;
-        height: 100vh;
       }
 
       body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         overflow: hidden;
       }
 
@@ -30,16 +36,19 @@
       }
 
       #txt {
-        display: flex;
-        padding-top: 8dvh;
-        justify-content: center;
         font-family: 'font';
         color: #fff;
         text-shadow: 0 0 7px var(--shadow), 0 0 10px var(--shadow),
           0 0 21px var(--shadow), 0 0 42px var(--shadow), 0 0 82px var(--shadow),
           0 0 92px var(--shadow), 0 0 102px var(--shadow),
           0 0 151px var(--shadow);
-        font-size: 100vmin;
+        font-size: 100vmin; /* Respects viewport dimensions */
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        line-height: 1; /* Eliminates extra space caused by font line height */
+        text-align: center;
       }
     </style>
   </head>
