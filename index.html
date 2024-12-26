@@ -4,6 +4,9 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>Clock</title>
     <style>
+      :root {
+        --shadow: #0022dd;
+      }
       @font-face {
         font-family: 'font';
         src: url('./font.ttf') format('truetype-variations');
@@ -22,7 +25,7 @@
       }
       .subcontainer {
         cursor: pointer;
-        height: 88.5dvh;
+        height: 105vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -31,10 +34,11 @@
       #txt {
         font-family: 'font';
         color: #fff;
-        text-shadow: 0 0 7px #0022dd, 0 0 10px #0022dd, 0 0 21px #0022dd,
-          0 0 42px #0022dd, 0 0 82px #0022dd, 0 0 92px #0022dd,
-          0 0 102px #0022dd, 0 0 151px #0022dd;
-        font-size: max(20vw, 30px);
+        text-shadow: 0 0 7px var(--shadow), 0 0 10px var(--shadow),
+          0 0 21px var(--shadow), 0 0 42px var(--shadow), 0 0 82px var(--shadow),
+          0 0 92px var(--shadow), 0 0 102px var(--shadow),
+          0 0 151px var(--shadow);
+        font-size: max(30vw, 30px);
       }
     </style>
   </head>
