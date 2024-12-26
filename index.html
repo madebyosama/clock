@@ -13,32 +13,33 @@
       }
 
       html {
-        height: 100dvh;
         background-color: #212121;
+        height: 100vh;
       }
 
       body {
         overflow: hidden;
       }
+
       ::selection {
         display: none;
       }
+
       .subcontainer {
         cursor: pointer;
-        height: 105vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
       }
 
       #txt {
+        display: flex;
+        padding-top: 8dvh;
+        justify-content: center;
         font-family: 'font';
         color: #fff;
         text-shadow: 0 0 7px var(--shadow), 0 0 10px var(--shadow),
           0 0 21px var(--shadow), 0 0 42px var(--shadow), 0 0 82px var(--shadow),
           0 0 92px var(--shadow), 0 0 102px var(--shadow),
           0 0 151px var(--shadow);
-        font-size: max(30vw, 30px);
+        font-size: 100vmin;
       }
     </style>
   </head>
