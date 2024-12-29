@@ -31,21 +31,25 @@
         display: none;
       }
 
+      .subcontainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+
       #txt {
-        cursor: none;
         font-family: 'font';
         color: #fff;
         text-shadow: 0 0 7px var(--shadow), 0 0 10px var(--shadow),
           0 0 21px var(--shadow), 0 0 42px var(--shadow), 0 0 82px var(--shadow),
           0 0 92px var(--shadow), 0 0 102px var(--shadow),
           0 0 151px var(--shadow);
-        font-size: 100vmin; /* Respects viewport dimensions */
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        line-height: 1; /* Eliminates extra space caused by font line height */
-        text-align: center;
+        font-size: calc(50vw + 10vh);
+        padding-top: calc(5vw + 10vh);
+        width: 100%; /* Full width */
+        height: 100%;
+        text-align: center; /* Center text horizontally */
       }
     </style>
   </head>
