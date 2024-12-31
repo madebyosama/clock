@@ -4,53 +4,30 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>Clock</title>
     <style>
-      :root {
-        --shadow: #0022dd;
-      }
       @font-face {
         font-family: 'font';
         src: url('./font.ttf') format('truetype-variations');
       }
 
-      html,
       body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        background-color: #212121;
-      }
-
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        background: #121212;
         overflow: hidden;
       }
-
       ::selection {
         display: none;
       }
-
       .subcontainer {
+        cursor: pointer;
+        height: 88.5dvh;
         display: flex;
-        justify-content: center;
         align-items: center;
-        width: 100%;
-        height: 100%;
+        justify-content: center;
       }
 
       #txt {
-        cursor: pointer;
         font-family: 'font';
         color: #fff;
-        text-shadow: 0 0 7px var(--shadow), 0 0 10px var(--shadow),
-          0 0 21px var(--shadow), 0 0 42px var(--shadow), 0 0 82px var(--shadow),
-          0 0 92px var(--shadow), 0 0 102px var(--shadow),
-          0 0 151px var(--shadow);
-        font-size: calc(50vw + 10vh);
-        width: 100%;
-        height: 100%;
-        text-align: center;
+        font-size: max(20vw, 30px);
       }
     </style>
   </head>
