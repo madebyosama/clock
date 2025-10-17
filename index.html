@@ -6,7 +6,7 @@
     <style>
       @font-face {
         font-family: 'font';
-        src: url('./font.ttf') format('truetype-variations');
+        src: url('./SNPro-Thin.otf') format('truetype-variations');
       }
 
       body {
@@ -27,13 +27,15 @@
 
       #time {
         font-family: 'font';
-        color: #faf4db;
+        /* color: #faf4db; */
+        color: #fff;
         font-size: max(20vw, 30px);
       }
 
       #date {
         font-family: 'font';
-        color: #faf4db;
+        /* color: #faf4db; */
+        color: #fff;
         font-size: max(2vw, 30px);
       }
     </style>
@@ -46,10 +48,10 @@
     </div>
     <script>
       function startTime() {
-        const today = new Date();
-        let h = today.getHours() % 12 || 12;
-        let m = today.getMinutes();
-        m = checkTime(m);
+        const today = new Date()
+        let h = today.getHours() % 12 || 12
+        let m = today.getMinutes()
+        m = checkTime(m)
 
         const days = [
           'Sunday',
@@ -59,7 +61,7 @@
           'Thursday',
           'Friday',
           'Saturday',
-        ];
+        ]
         const months = [
           'January',
           'February',
@@ -73,25 +75,25 @@
           'October',
           'November',
           'December',
-        ];
+        ]
 
-        const day = days[today.getDay()];
-        const date = today.getDate();
-        const month = months[today.getMonth()];
-        const year = today.getFullYear();
+        const day = days[today.getDay()]
+        const date = today.getDate()
+        const month = months[today.getMonth()]
+        const year = today.getFullYear()
 
-        document.getElementById('time').innerHTML = h + ':' + m;
+        document.getElementById('time').innerHTML = h + ':' + m
         document.getElementById(
           'date'
-        ).innerHTML = `${day}, ${date} ${month} ${year}`;
-        setTimeout(startTime, 1000);
+        ).innerHTML = `${day}, ${date} ${month} ${year}`
+        setTimeout(startTime, 1000)
       }
 
       function checkTime(i) {
         if (i < 10) {
-          i = '0' + i;
+          i = '0' + i
         }
-        return i;
+        return i
       }
 
       function fullscreen() {
@@ -102,28 +104,28 @@
           (document.mozFullScreenElement &&
             document.mozFullScreenElement !== null) ||
           (document.msFullscreenElement &&
-            document.msFullscreenElement !== null);
+            document.msFullscreenElement !== null)
 
-        var docElm = document.documentElement;
+        var docElm = document.documentElement
         if (!isInFullScreen) {
           if (docElm.requestFullscreen) {
-            docElm.requestFullscreen();
+            docElm.requestFullscreen()
           } else if (docElm.mozRequestFullScreen) {
-            docElm.mozRequestFullScreen();
+            docElm.mozRequestFullScreen()
           } else if (docElm.webkitRequestFullScreen) {
-            docElm.webkitRequestFullScreen();
+            docElm.webkitRequestFullScreen()
           } else if (docElm.msRequestFullscreen) {
-            docElm.msRequestFullscreen();
+            docElm.msRequestFullscreen()
           }
         } else {
           if (document.exitFullscreen) {
-            document.exitFullscreen();
+            document.exitFullscreen()
           } else if (document.webkitExitFullscreen) {
-            document.webkitExitFullscreen();
+            document.webkitExitFullscreen()
           } else if (document.mozCancelFullScreen) {
-            document.mozCancelFullScreen();
+            document.mozCancelFullScreen()
           } else if (document.msExitFullscreen) {
-            document.msExitFullscreen();
+            document.msExitFullscreen()
           }
         }
       }
