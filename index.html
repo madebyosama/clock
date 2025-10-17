@@ -36,6 +36,12 @@
         color: #fff;
         font-size: max(2vw, 18px);
       }
+
+      @media screen and (max-width: 150px) {
+        #date {
+          display: none;
+        }
+      }
     </style>
   </head>
 
@@ -127,6 +133,15 @@
           }
         }
       }
+
+      // 🪟 Small popup window (Pomofocus-like)
+      document.getElementById('date').addEventListener('click', () => {
+        window.open(
+          window.location.href, // Opens same page
+          'ClockWindow',
+          'width=146,height=81.484,left=0,top=248,resizable=yes,scrollbars=no,status=no'
+        )
+      })
     </script>
   </body>
 </html>
